@@ -179,7 +179,9 @@ class _jobState extends State<job> {
   }
 
   void finishedWork(String refId) {
-    var data={"status":"Completed.Waiting For Pickup"};
+    var data={"status":"Completed.Waiting For Pickup",
+    "delRequest":0
+    };
     common.updateFirebase(refId, data, "request");
     _btnController.success();
 
